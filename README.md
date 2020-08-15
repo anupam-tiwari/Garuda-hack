@@ -1,11 +1,11 @@
-# Robust Chest CT Image Segmentation of COVID-19 Lung Infection based on limited data
+# Electrical impedance tomography Remote medical diagnostics(CoronAI) - GarudaHack
+test it out: 
+[![DOI](http://xcovid-ai-assistant.cf/)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3902293.svg)](https://doi.org/10.5281/zenodo.3902293)
-
-In this paper, we proposed and evaluated an approach for automated segmentation of COVID-19 infected regions in CT volumes. Our method focused on on-the-fly generation of unique and random image patches for training by exploiting heavy preprocessing and extensive data augmentation. Thus, it is possible to handle limited dataset sizes which act as variant database. Instead of new and complex neural network architectures, we utilized the standard 3D U-Net. We proved that our medical image segmentation pipeline is able to successfully train accurate as well as robust models without overfitting on limited data.
+In this paper, we proposed and evaluated an approach for automated segmentation of COVID-19 infected regions in EIT volumes. Our method focused on on-the-fly generation of unique and random image patches for training by exploiting heavy preprocessing and extensive data augmentation. Thus, it is possible to handle limited dataset sizes which act as variant database. Instead of new and complex neural network architectures, we utilized the standard 3D U-Net. We proved that our medical image segmentation pipeline is able to successfully train accurate as well as robust models without overfitting on limited data.
 Furthermore, we were able to outperform current state-of-the-art semantic segmentation approaches for lungs and COVID-19 infection. Our work has great potential to be applied as a clinical decision support system for COVID-19 quantitative assessment and disease monitoring in the clinical environment. Nevertheless, further research is needed on COVID-19 semantic segmentation in clinical studies for evaluating clinical performance and robustness.
 
-The models, predictions, visualizations and evaluation (scores, figures) are available under the following link: https://doi.org/10.5281/zenodo.3902293
+
 
 **This work does NOT claim clinical performance in any means and underlie purely educational purposes.**
 
@@ -22,13 +22,7 @@ The models, predictions, visualizations and evaluation (scores, figures) are ava
 
 Download the code repository via git clone to your disk. Afterwards, install all required dependencies, download the dataset and setup the file structure.
 
-```sh
-git clone https://github.com/muellerdo/covid19.MIScnn.git
-cd covid19.MIScnn/
 
-pip3 install -r requirements.txt
-python3 scripts/download_data.py
-```
 
 Optionally, you can run the data exploration, which give some interesting information about the dataset.
 
@@ -57,14 +51,14 @@ python3 scripts/run_evaluation.py
 
 ## Materials / Dataset
 
-We used the public dataset from Ma et al. which consists of 20 annotated COVID-19 chest CT volumes⁠. Currently, this dataset is the only publicly available 3D volume set with annotated COVID-19 infection segmentation⁠. Each CT volume was first labeled by junior annotators, then refined by two radiologists with 5 years of experience and afterwards the annotations verified by senior radiologists with more than 10 years of experience⁠. The CT images were labeled into four classes: Background, lung left, lung right and COVID-19 infection.
+We used the public dataset from Ma et al. which consists of 20 annotated COVID-19 chest EIT volumes⁠. Currently, this dataset is the only publicly available 3D volume set with annotated COVID-19 infection segmentation⁠. Each EIT volume was first labeled by junior annotators, then refined by two radiologists with 5 years of experience and afterwards the annotations verified by senior radiologists with more than 10 years of experience⁠. The EIT images were labeled into four classes: Background, lung left, lung right and COVID-19 infection.
 
-Reference: https://zenodo.org/record/3757476#.XqhRp_lS-5D
+Reference: http://xcovid-ai-assistant.cf/
 
 ## Methods
 
 The implemented medical image segmentation pipeline can be summarized in the following core steps:
-- Dataset: 20x COVID-19 CT volumes
+- Dataset: 20x COVID-19 EIT volumes
 - Limited dataset → Utilization as variation database
 - Heavy preprocessing methods
 - Extensive data augmentation
@@ -78,7 +72,6 @@ The implemented medical image segmentation pipeline can be summarized in the fol
 
 This pipeline was based on MIScnn⁠, which is an in-house developed open-source framework to setup complete medical image segmentation pipelines with convolutional neural networks and deep learning models on top of Tensorflow/Keras⁠. The framework supports extensive preprocessing, data augmentation, state-of-the-art deep learning models and diverse evaluation techniques. The experiment was performed on a Nvidia Quadro P6000.
 
-MIScnn: https://github.com/frankkramer-lab/MIScnn
 
 ## Results & Discussion
 
@@ -108,34 +101,5 @@ to segment COVID-19 infection with state-of-the-art
 accuracy that is comparable to models trained on large
 datasets.
 
-## Author
-
-Dominik Müller  
-Email: dominik.mueller@informatik.uni-augsburg.de  
-IT-Infrastructure for Translational Medical Research  
-University Augsburg  
-Bavaria, Germany
-
-## How to cite / More information
-
-Dominik Müller, Iñaki Soto-Rey and Frank Kramer. (2020)   
-Automated Chest CT Image Segmentation of COVID-19 Lung Infection based on 3D U-Net.  
-arXiv e-print: [https://arxiv.org/abs/2007.04774](https://arxiv.org/abs/2007.04774)
-
-```
-Article{covid19seg,
-  title={Automated Chest CT Image Segmentation of COVID-19 Lung Infection based on 3D U-Net},
-  author={Dominik Müller, Iñaki Soto-Rey and Frank Kramer},
-  year={2020},
-  eprint={2007.04774},
-  archivePrefix={arXiv},
   primaryClass={eess.IV}
 }
-```
-
-Thank you for citing our work.
-
-## License
-
-This project is licensed under the GNU GENERAL PUBLIC LICENSE Version 3.  
-See the LICENSE.md file for license rights and limitations.
