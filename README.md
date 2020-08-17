@@ -1,4 +1,4 @@
-# Electrical impedance tomography Remote medical diagnostics(CoronAI) - GarudaHack
+# Electrical impedance tomography Remote medical diagnostics(CoronAI) - nculbate-india-hack
 
 Test it out: http://xcovid-ai-assistant.cf/
 
