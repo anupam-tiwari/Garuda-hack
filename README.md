@@ -1,4 +1,5 @@
 # Electrical impedance tomography Remote medical diagnostics(CoronAI) - Incubate-india-hack
+original paper: https://github.com/frankkramer-lab/covid19.MIScnn
 
 Test it out: http://xcovid-ai-assistant.cf/
 
